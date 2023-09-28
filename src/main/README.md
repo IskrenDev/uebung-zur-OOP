@@ -1,23 +1,33 @@
-# Projektidee: Bibliotheksverwaltungssystem
+# Library Management System
 
-## Beschreibung:
-Ein System zur Verwaltung von Büchern in einer Bibliothek. Nutzer können Bücher suchen, ausleihen und zurückgeben. Das System verfolgt auch, welche Bücher aktuell ausgeliehen sind und von wem.
+A simple system for managing books in a library. Users can search for, borrow, and return books. The system also tracks which books are currently borrowed and by whom.
 
-## Konzepte und deren Anwendung:
+## Features
 
-### Klassen und Objekte:
+- **Search Functionality:** Users can search for books by title, author, or ISBN.
+- **Borrowing & Returning:** Users can borrow available books and return them when done.
+- **User Management:** Track registered users and their borrowed books.
+- **Book Categories:** Differentiate between general books, academic books, and novels.
 
-Klasse Buch: Enthält Eigenschaften wie Titel, Autor, ISBN-Nummer und Status (ausgeliehen oder verfügbar).
-Klasse Nutzer: Enthält Informationen über den Nutzer wie Name, Mitgliedsnummer und ausgeliehene Bücher.
-### Vererbung:
+## Concepts Implemented
 
-Klasse Fachbuch erbt von Buch: Ein spezielles Buch mit zusätzlichen Eigenschaften wie Fachgebiet oder Schwierigkeitsgrad.
-Klasse Roman erbt von Buch: Ein spezielles Buch mit zusätzlichen Eigenschaften wie Genre oder Hauptcharaktere.
-### Modifier static:
+1. **Classes and Objects:**
+    - `Book` class: Contains properties such as title, author, ISBN number, and status (borrowed or available).
+    - `User` class: Contains user details like name, membership number, and borrowed books.
 
-In der Klasse Bibliothek: Eine statische Methode, die die Gesamtzahl der Bücher in der Bibliothek zurückgibt.
-In der Klasse Nutzer: Eine statische Methode, die die Gesamtzahl der registrierten Nutzer zurückgibt.
-### Interfaces:
+2. **Inheritance:**
+    - `SpecialistBook` class inherits from `Book`: A specialized book with additional properties like subject or difficulty level.
+    - `Novel` class inherits from `Book`: A specialized book with additional properties like genre or main characters.
 
-Interface Ausleihbar: Enthält Methoden wie ausleihen(), zurückgeben() und istAusgeliehen(). Die Klassen Buch, Fachbuch und Roman implementieren dieses Interface.
-Interface Suchbar: Enthält eine Methode suchen(), die von der Klasse Bibliothek implementiert wird, um Bücher nach verschiedenen Kriterien zu suchen.
+3. **Static Modifiers:**
+    - In the `Library` class: A static method that returns the total number of books in the library.
+    - In the `User` class: A static method that returns the total number of registered users.
+
+4. **Interfaces:**
+    - `Borrowable` interface: Contains methods like `borrow()`, `returnBook()`, and `isBorrowed()`. The `Book`, `AcademicBook`, and `Novel` classes implement this interface.
+    - `Searchable` interface: Contains a `search()` method, implemented by the `Library` class to search for books based on various criteria.
+
+## Additional Ideas
+
+- Extend the system to calculate fines for overdue books.
+- Add a feature to add and view book reviews and ratings.
