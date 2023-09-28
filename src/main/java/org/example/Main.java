@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.library.User;
 import org.example.library.book.Novel;
+import org.example.library.book.SpecialistBook;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,5 +19,9 @@ public class Main {
         Novel novel5 = new Novel("Das Parfum", "Patrick Süskind", "978-3-257-23028-4", "Historischer Roman, Kriminalroman");
 
         System.out.println(novel1);
+
+        SpecialistBook specialistBook1 = new SpecialistBook("Effective Java", "Joshua Bloch", "78-0-13-468599-1", "Java-Programmierung, Best Practices", "Fortgeschritten");
+
+        System.out.println(specialistBook1);
     }
 }
