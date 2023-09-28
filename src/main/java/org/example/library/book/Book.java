@@ -1,8 +1,10 @@
 package org.example.library.book;
 
+import org.example.library.User;
+
 import java.util.Objects;
 
-public class Book {
+public class Book implements Borrowable {
     private static int totalBooks = 0;
     private String title;
     private String autor;
@@ -77,5 +79,20 @@ public class Book {
                 ", isbn='" + isbn + '\'' +
                 ", isBorrowed=" + isBorrowed +
                 '}';
+    }
+
+    @Override
+    public void borrow(User user) {
+        user.addBookToBooksArray("title1");
+    }
+
+    @Override
+    public void returnBook() {
+
+    }
+
+    @Override
+    public boolean isBorrowed() {
+        return false;
     }
 }
