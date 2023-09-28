@@ -1,25 +1,25 @@
-package org.example.library;
+package org.example.library.book;
 
 import java.util.Objects;
 
 public class Book {
-    private String titel;
+    private String title;
     private String autor;
     private String isbn;
     private boolean isBorrowed = false;
 
     public Book(String titel, String autor, String isbn) {
-        this.titel = titel;
+        this.title = titel;
         this.autor = autor;
         this.isbn = isbn;
     }
 
-    public String getTitel() {
-        return titel;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitel(String titel) {
-        this.titel = titel;
+    public void setTitle(String titel) {
+        this.title = titel;
     }
 
     public String getAutor() {
@@ -38,7 +38,7 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public boolean isBorrowed() {
+    public boolean getBorrowedStatus() {
         return isBorrowed;
     }
 
@@ -51,18 +51,18 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return isBorrowed == book.isBorrowed && Objects.equals(titel, book.titel) && Objects.equals(autor, book.autor) && Objects.equals(isbn, book.isbn);
+        return isBorrowed == book.isBorrowed && Objects.equals(title, book.title) && Objects.equals(autor, book.autor) && Objects.equals(isbn, book.isbn);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(titel, autor, isbn, isBorrowed);
+        return Objects.hash(title, autor, isbn, isBorrowed);
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "titel='" + titel + '\'' +
+                "titel='" + title + '\'' +
                 ", autor='" + autor + '\'' +
                 ", isbn='" + isbn + '\'' +
                 ", isBorrowed=" + isBorrowed +
