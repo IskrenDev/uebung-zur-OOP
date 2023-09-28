@@ -72,4 +72,14 @@ public class User {
         result = 31 * result + Arrays.hashCode(borrowedBooks);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", membershipNumber=" + membershipNumber +
+                ", borrowedBooks=" + Arrays.toString(borrowedBooks) +
+                '}';
+    }
 }
